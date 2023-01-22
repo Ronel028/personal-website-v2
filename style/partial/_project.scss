@@ -1,0 +1,109 @@
+@use "../global/function" as func;
+
+/* project section */
+.project-section {
+  padding: 40px 0;
+  .project {
+    .title {
+      margin-bottom: 77px;
+      text-align: center;
+      h2 {
+        font-size: clamp(1.75rem, 1.3546rem + 1.9231vw, 2.125rem);
+      }
+      p {
+        font-size: clamp(1rem, 0.8682rem + 0.641vw, 1.125rem);
+      }
+    }
+
+    /* card section or the project section */
+    .project-container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
+      row-gap: 45px;
+      column-gap: 15px;
+
+      /* responsive design */
+      @media screen and (min-width: 744px) {
+        grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+      }
+
+      .card {
+        width: 100%;
+
+        .image-container {
+          width: 100%;
+          height: auto;
+          margin-bottom: 7px;
+
+          img {
+            width: inherit;
+            height: inherit;
+            object-fit: cover;
+          }
+        }
+
+        /* project title */
+        .project-title {
+          h4 {
+            font-size: func.rem(18);
+            letter-spacing: 1.5px;
+            font-weight: var(--font-bold);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+          }
+          ul.tech-use {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 21px;
+            margin-bottom: 12px;
+
+            & > li {
+              font-size: func.rem(14);
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              font-weight: var(--font-regular);
+            }
+          }
+          ul.project-links {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+
+            /* responsive design */
+            @media screen and (min-width: 744px) {
+              display: none;
+            }
+
+            li {
+              & > a {
+                font-size: func.rem(16);
+                font-weight: var(--font-bold);
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                position: relative;
+                &:hover::before {
+                  background-color: var(--hover-color);
+                  transition: all ease-in-out 0.3s;
+                }
+
+                &::before {
+                  content: "";
+                  background-color: var(--underline-color);
+                  transition: all ease-in-out 0.3s;
+                  width: 95%;
+                  height: 2px;
+                  border-radius: 6px;
+                  position: absolute;
+                  left: 0;
+                  bottom: -4px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
