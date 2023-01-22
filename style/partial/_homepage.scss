@@ -52,14 +52,21 @@
      /* hero section */
     .hero-section{
         height: 80vh;
-        margin-top: 196px;
+        margin-top: 107px;
+
+
+        /* responsive design */
+        @media screen and(min-width: 600px) {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+        }
 
         .hero-container{
-            display: flex;
-            flex-direction: column;
-            gap: 41px;
+
             h1{
                 font-size: clamp(2rem, 0.4552rem + 7.47vw, 3.4375rem);
+                margin-bottom: 22px;
     
                 .name{
                     position: relative;
@@ -77,15 +84,45 @@
     
                 /* responsive design */
                 @media screen and(min-width: 600px) {
-                    font-size: clamp(3.4375rem, 1.8685rem + 3.9286vw, 4.8125rem);
+                    font-size: clamp(3.4375rem, 1.8685rem + 3.93vw, 4.8125rem);
                     max-width: 748px;
                 }
             }
             p{
                 font-size: clamp(1rem, 0.873rem + 0.6309vw, 1.125rem);
+                letter-spacing: 1.5px;
+                font-weight: var(--font-regular);
+                line-height: 23px;
+                margin-bottom: 25px;
                 /* responsive design */
                 @media screen and(min-width: 600px) {
                     max-width: 748px;
+                }
+            }
+
+            .download-btn{
+                color: var(--text-color);
+                font-size: clamp(1rem, 0.873rem + 0.6309vw, 1.125rem);
+                letter-spacing: 1.5px;
+                font-weight: var(--font-bold);
+
+                position: relative;
+
+                &:hover::before{
+                    background-color: var(--hover-color);
+                    transition: all ease-in-out 0.3s;
+                }
+
+                &::before{
+                    content: "";
+                    background-color: var(--underline-color);
+                    transition: all ease-in-out 0.3s;
+                    width: 95%;
+                    height: 2px;
+                    border-radius: 6px;
+                    position: absolute;
+                    left: 0;
+                    bottom: -4px;
                 }
             }
         }
