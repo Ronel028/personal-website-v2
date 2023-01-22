@@ -30,6 +30,17 @@ a {
   color: var(--text-color);
 }
 
+.title {
+  margin-bottom: 77px;
+  text-align: center;
+}
+.title h2 {
+  font-size: clamp(1.75rem, 1.3546rem + 1.9231vw, 2.125rem);
+}
+.title p {
+  font-size: clamp(1rem, 0.8682rem + 0.641vw, 1.125rem);
+}
+
 .wrapper {
   max-width: 1199px;
   width: 90%;
@@ -154,19 +165,11 @@ a {
 /* project section */
 .project-section {
   padding: 40px 0;
+  margin-bottom: 80px;
 }
 .project-section .project {
   /* card section or the project section */
-}
-.project-section .project .title {
-  margin-bottom: 77px;
-  text-align: center;
-}
-.project-section .project .title h2 {
-  font-size: clamp(1.75rem, 1.3546rem + 1.9231vw, 2.125rem);
-}
-.project-section .project .title p {
-  font-size: clamp(1rem, 0.8682rem + 0.641vw, 1.125rem);
+  /* see more button */
 }
 .project-section .project .project-container {
   width: 100%;
@@ -175,6 +178,7 @@ a {
   row-gap: 45px;
   -moz-column-gap: 15px;
        column-gap: 15px;
+  margin-bottom: 30px;
   /* responsive design */
 }
 @media screen and (min-width: 744px) {
@@ -297,4 +301,108 @@ a {
   position: absolute;
   left: 0;
   bottom: -4px;
+}
+.project-section .project .see-more-btn {
+  text-align: center;
+}
+.project-section .project .see-more-btn a {
+  font-size: 1rem;
+  font-weight: var(--font-bold);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  position: relative;
+}
+.project-section .project .see-more-btn a:hover::before {
+  background-color: var(--hover-color);
+  transition: all ease-in-out 0.3s;
+}
+.project-section .project .see-more-btn a::before {
+  content: "";
+  background-color: var(--underline-color);
+  transition: all ease-in-out 0.3s;
+  width: 95%;
+  height: 2px;
+  border-radius: 6px;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+}
+
+/* skills section */
+.skills-section {
+  padding: 44px 0;
+}
+.skills-section .skills .skills-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+@media screen and (min-width: 600px) {
+  .skills-section .skills .skills-container {
+    grid-template-columns: repeat(auto-fit, minmax(333px, 1fr));
+  }
+}
+.skills-section .skills .skills-container .card {
+  width: 100%;
+  min-height: 414px;
+  height: auto;
+  padding: 27px 25px;
+  background-color: var(--card-background);
+}
+.skills-section .skills .skills-container .card .front-end-skills .front-end,
+.skills-section .skills .skills-container .card .front-end-skills .back-end,
+.skills-section .skills .skills-container .card .front-end-skills .others,
+.skills-section .skills .skills-container .card .back-end-skills .front-end,
+.skills-section .skills .skills-container .card .back-end-skills .back-end,
+.skills-section .skills .skills-container .card .back-end-skills .others,
+.skills-section .skills .skills-container .card .other-skills .front-end,
+.skills-section .skills .skills-container .card .other-skills .back-end,
+.skills-section .skills .skills-container .card .other-skills .others {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 27px;
+}
+.skills-section .skills .skills-container .card .front-end-skills .front-end h5,
+.skills-section .skills .skills-container .card .front-end-skills .back-end h5,
+.skills-section .skills .skills-container .card .front-end-skills .others h5,
+.skills-section .skills .skills-container .card .back-end-skills .front-end h5,
+.skills-section .skills .skills-container .card .back-end-skills .back-end h5,
+.skills-section .skills .skills-container .card .back-end-skills .others h5,
+.skills-section .skills .skills-container .card .other-skills .front-end h5,
+.skills-section .skills .skills-container .card .other-skills .back-end h5,
+.skills-section .skills .skills-container .card .other-skills .others h5 {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  font-weight: var(--font-bold);
+  letter-spacing: 1.5px;
+}
+.skills-section .skills .skills-container .card .front-end-skills .skills-list,
+.skills-section .skills .skills-container .card .back-end-skills .skills-list,
+.skills-section .skills .skills-container .card .other-skills .skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.skills-section .skills .skills-container .card .front-end-skills .skills-list div,
+.skills-section .skills .skills-container .card .back-end-skills .skills-list div,
+.skills-section .skills .skills-container .card .other-skills .skills-list div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform ease-in-out 0.3s;
+}
+.skills-section .skills .skills-container .card .front-end-skills .skills-list div:hover,
+.skills-section .skills .skills-container .card .back-end-skills .skills-list div:hover,
+.skills-section .skills .skills-container .card .other-skills .skills-list div:hover {
+  transform: scale(1.2);
+  transition: transform ease-in-out 0.3s;
+}
+.skills-section .skills .skills-container .card .front-end-skills .skills-list div p,
+.skills-section .skills .skills-container .card .back-end-skills .skills-list div p,
+.skills-section .skills .skills-container .card .other-skills .skills-list div p {
+  font-size: 0.9375rem;
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }/*# sourceMappingURL=style.css.map */
