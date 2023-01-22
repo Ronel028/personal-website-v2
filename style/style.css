@@ -1,0 +1,25 @@
+:root {
+  --main-background: hsl(209, 53%, 16%);
+  --text-color: hsl(0, 0%, 100%);
+  --underline-color: hsl(259, 59%, 56%);
+  --card-background: hsl(211, 56%, 20%);
+  --hover-color: hsl(259, 64%, 44%);
+  --font-space-grotesk: "Space Grotesk", sans-serif;
+  --font-bold: 700;
+  --font-regular: 400;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-space-grotesk);
+  background-color: var(--main-background);
+}
+
+ul {
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */
