@@ -1,7 +1,7 @@
 :root {
   --main-background: hsl(209, 53%, 16%);
   --text-color: hsl(0, 0%, 100%);
-  --underline-color: hsl(259, 59%, 56%);
+  --underline-color: hsl(259, 72%, 69%);
   --card-background: hsl(211, 56%, 20%);
   --hover-color: hsl(259, 64%, 44%);
   --font-space-grotesk: "Space Grotesk", sans-serif;
@@ -178,7 +178,7 @@ a {
   row-gap: 45px;
   -moz-column-gap: 15px;
        column-gap: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   /* responsive design */
 }
 @media screen and (min-width: 744px) {
@@ -331,6 +331,7 @@ a {
 /* skills section */
 .skills-section {
   padding: 44px 0;
+  margin-bottom: 80px;
 }
 .skills-section .skills .skills-container {
   display: grid;
@@ -380,9 +381,11 @@ a {
 .skills-section .skills .skills-container .card .front-end-skills .skills-list,
 .skills-section .skills .skills-container .card .back-end-skills .skills-list,
 .skills-section .skills .skills-container .card .other-skills .skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  row-gap: 25px;
 }
 .skills-section .skills .skills-container .card .front-end-skills .skills-list div,
 .skills-section .skills .skills-container .card .back-end-skills .skills-list div,
@@ -401,8 +404,201 @@ a {
 .skills-section .skills .skills-container .card .front-end-skills .skills-list div p,
 .skills-section .skills .skills-container .card .back-end-skills .skills-list div p,
 .skills-section .skills .skills-container .card .other-skills .skills-list div p {
-  font-size: 0.9375rem;
-  font-weight: var(--font-bold);
-  text-transform: uppercase;
+  font-size: 0.8125rem;
+  font-weight: var(--font-regular);
   letter-spacing: 1.5px;
+}
+
+/* contact section */
+.contact-section {
+  padding: 44px 0;
+  margin-bottom: 80px;
+}
+.contact-section .contact .contact-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  row-gap: 70px;
+  /* contact form */
+}
+@media screen and (min-width: 800px) {
+  .contact-section .contact .contact-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    -moz-column-gap: 66px;
+         column-gap: 66px;
+  }
+}
+.contact-section .contact .contact-container .contact-info h3 {
+  display: none;
+}
+@media screen and (min-width: 800px) {
+  .contact-section .contact .contact-container .contact-info h3 {
+    display: block;
+    font-size: 2.75rem;
+    font-weight: var(--font-bold);
+    letter-spacing: 1.5px;
+    margin-bottom: 24px;
+  }
+}
+.contact-section .contact .contact-container .contact-info p.desc {
+  text-align: center;
+  margin-bottom: 37px;
+  font-size: clamp(1rem, 0.8682rem + 0.641vw, 1.125rem);
+  font-weight: var(--font-regular);
+  line-height: 22px;
+}
+@media screen and (min-width: 800px) {
+  .contact-section .contact .contact-container .contact-info p.desc {
+    text-align: left;
+  }
+}
+.contact-section .contact .contact-container .contact-info .phone-email {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact-section .contact .contact-container .contact-info .phone-email .email {
+  margin-bottom: 24px;
+}
+.contact-section .contact .contact-container .contact-info .phone-email > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 800px) {
+  .contact-section .contact .contact-container .contact-info .phone-email > div {
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
+  }
+}
+.contact-section .contact .contact-container .contact-info .phone-email > div img {
+  width: 36px;
+  height: 36px;
+}
+.contact-section .contact .contact-container .contact-info .phone-email > div p {
+  font-size: 1.125rem;
+  font-weight: var(--font-bold);
+  letter-spacing: 1.5px;
+}
+.contact-section .contact .contact-container .contact-form {
+  background-color: var(--card-background);
+  padding: 35px 27px;
+}
+.contact-section .contact .contact-container .contact-form .form label {
+  font-size: 1.125rem;
+  font-weight: var(--font-bold);
+  letter-spacing: 1.5px;
+}
+.contact-section .contact .contact-container .contact-form .form .form-input {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  margin-bottom: 27px;
+}
+.contact-section .contact .contact-container .contact-form .form .form-input input[type=text],
+.contact-section .contact .contact-container .contact-form .form .form-input input[type=email],
+.contact-section .contact .contact-container .contact-form .form .form-input textarea {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--text-color);
+  color: var(--text-color);
+  font-family: var(--font-space-grotesk);
+}
+.contact-section .contact .contact-container .contact-form .form .form-input input[type=text]::-moz-placeholder, .contact-section .contact .contact-container .contact-form .form .form-input input[type=email]::-moz-placeholder, .contact-section .contact .contact-container .contact-form .form .form-input textarea::-moz-placeholder {
+  color: hsl(0deg, 8%, 80%);
+  font-family: var(--font-space-grotesk);
+  font-size: 1rem;
+  font-weight: var(--font-regular);
+}
+.contact-section .contact .contact-container .contact-form .form .form-input input[type=text]:-ms-input-placeholder, .contact-section .contact .contact-container .contact-form .form .form-input input[type=email]:-ms-input-placeholder, .contact-section .contact .contact-container .contact-form .form .form-input textarea:-ms-input-placeholder {
+  color: hsl(0deg, 8%, 80%);
+  font-family: var(--font-space-grotesk);
+  font-size: 1rem;
+  font-weight: var(--font-regular);
+}
+.contact-section .contact .contact-container .contact-form .form .form-input input[type=text]::placeholder,
+.contact-section .contact .contact-container .contact-form .form .form-input input[type=email]::placeholder,
+.contact-section .contact .contact-container .contact-form .form .form-input textarea::placeholder {
+  color: hsl(0deg, 8%, 80%);
+  font-family: var(--font-space-grotesk);
+  font-size: 1rem;
+  font-weight: var(--font-regular);
+}
+.contact-section .contact .contact-container .contact-form .form .send-message-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.contact-section .contact .contact-container .contact-form .form .send-message-btn .send-btn {
+  padding: 7px 9px;
+  background-color: var(--underline-color);
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-family: var(--font-space-grotesk);
+  font-size: 0.9375rem;
+  font-weight: var(--font-regular);
+  color: var(--text-color);
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: background ease-in-out 0.3s;
+}
+.contact-section .contact .contact-container .contact-form .form .send-message-btn .send-btn:hover {
+  background-color: var(--hover-color);
+}
+
+/* footer section */
+.footer-section {
+  padding-bottom: 70px;
+  /* navigation */
+}
+.footer-section .footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  margin-bottom: 69px;
+  /* responsive design */
+}
+@media screen and (min-width: 600px) {
+  .footer-section .footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.footer-section .footer .logo {
+  font-size: 1.625rem;
+  color: var(--text-color);
+  font-weight: var(--font-bold);
+  letter-spacing: 1.3px;
+}
+.footer-section .footer .social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 39px;
+}
+.footer-section .footer .social-links li a svg path {
+  transition: all ease-in-out 0.3s;
+}
+.footer-section .footer .social-links li a:hover svg path {
+  transition: all ease-in-out 0.3s;
+  fill: var(--underline-color);
+}
+.footer-section .creator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: var(--font-regular);
 }/*# sourceMappingURL=style.css.map */

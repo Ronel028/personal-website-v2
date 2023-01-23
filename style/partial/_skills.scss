@@ -3,15 +3,9 @@
 /* skills section */
 .skills-section {
   padding: 44px 0;
+  margin-bottom: 80px;
   .skills {
     .skills-container {
-      //   display: flex;
-      //   flex-direction: column;
-      //   align-items: center;
-      //   gap: 25px;
-      //   @media screen and (min-width: 744px) {
-      //     flex-direction: row;
-      //   }
       display: grid;
       grid-template-columns: 1fr;
       gap: 25px;
@@ -20,7 +14,6 @@
       }
       .card {
         width: 100%;
-        // max-width: 333px;
         min-height: 414px;
         height: auto; //
         padding: 27px 25px;
@@ -44,9 +37,10 @@
             }
           }
           .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 25px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+            column-gap: 50px;
+            row-gap: 25px;
 
             div {
               display: flex;
@@ -59,9 +53,8 @@
               }
 
               p {
-                font-size: func.rem(15);
-                font-weight: var(--font-bold);
-                text-transform: uppercase;
+                font-size: func.rem(13);
+                font-weight: var(--font-regular);
                 letter-spacing: 1.5px;
               }
             }
