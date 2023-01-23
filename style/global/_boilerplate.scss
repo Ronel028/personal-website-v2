@@ -30,3 +30,7 @@ a {
     font-size: clamp(1rem, 0.8682rem + 0.641vw, 1.125rem);
   }
 }
+
+.animation_delay {
+  animation-delay: var(--animate-delay);
+}

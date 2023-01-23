@@ -10,6 +10,15 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./style/style.css" />
     <title>Ronel Florida | Aspiring Full Stack Developer</title>
   </head>
@@ -70,356 +79,721 @@
       </nav>
       <main class="hero-section">
         <section class="wrapper hero-container">
-          <h1>
+          <h1 class="animate__animated animate__fadeInLeft">
             Nice to meet you! I’m <span class="name">Ronel Florida.</span>
           </h1>
-          <p>
+          <p class="animate__animated animate__fadeInLeft animation_delay">
             Aspiring Full Stack Developer. I enjoy creating website and web
             applications. I'm currently learning React and improving my
             problem-solving skills to become a good developer/programmer.
           </p>
-          <a
-            href="https://drive.google.com/file/d/1DYZ23EDZuZdzzZG4shP1etRDSQUt7qem/view?usp=sharing"
-            target="_blank"
-            class="download-btn"
-          >
-            DOWNLOAD MY CV
-          </a>
+          <div class="animate__animated animate__fadeInLeft animation_delay">
+            <a
+              href="https://drive.google.com/file/d/1DYZ23EDZuZdzzZG4shP1etRDSQUt7qem/view?usp=sharing"
+              target="_blank"
+              class="download-btn"
+            >
+              DOWNLOAD MY CV
+            </a>
+          </div>
         </section>
       </main>
     </header>
     <!-- project section -->
     <section class="project-section">
       <div class="wrapper project">
-        <div class="title">
+        <div
+          class="title"
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-aos-duration="800"
+        >
           <h2>PORTFOLIO</h2>
           <p>Personal Projects</p>
         </div>
-        <div class="project-container">
-          <div class="card">
-            <div class="image-container">
-              <img
-                src="./assests/fylo-landing-page.webp"
-                alt="fylo landing page"
-              />
-              <div class="project-links-desktop">
-                <ul>
-                  <li>
-                    <a
-                      href="https://fem-fylo-landing-page.vercel.app/"
-                      target="_blank"
-                      >view project</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://github.com/Ronel028/fem-fylo-landing-page"
-                      target="_blank"
-                      >view code</a
-                    >
-                  </li>
-                </ul>
+        <div
+          class="project-container swiper"
+          data-aos="fade-left"
+          data-aos-delay="500"
+          data-aos-duration="600"
+        >
+          <div class="swiper-wrapper">
+            <!-- first slide of project -->
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="image-container">
+                  <img
+                    src="./assests/fylo-landing-page.webp"
+                    alt="fylo landing page"
+                  />
+                  <div class="project-links-desktop">
+                    <ul>
+                      <li>
+                        <a
+                          href="https://fem-fylo-landing-page.vercel.app/"
+                          target="_blank"
+                          >view project</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://github.com/Ronel028/fem-fylo-landing-page"
+                          target="_blank"
+                          >view code</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="project-title">
+                  <h4>fylo landing page</h4>
+                  <ul class="tech-use">
+                    <li>html</li>
+                    <li>css</li>
+                    <li>javascript</li>
+                  </ul>
+                  <ul class="project-links">
+                    <li>
+                      <a
+                        href="https://fem-fylo-landing-page.vercel.app/"
+                        target="_blank"
+                        >view project</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/Ronel028/fem-fylo-landing-page"
+                        target="_blank"
+                        >view code</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card">
+                <div class="image-container">
+                  <img
+                    src="./assests/calculator-app.webp"
+                    alt="Calculator app"
+                  />
+                  <div class="project-links-desktop">
+                    <ul>
+                      <li>
+                        <a
+                          href="https://fem-calculator-app-seven.vercel.app/"
+                          target="_blank"
+                          >view project</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://github.com/Ronel028/FEM-Calculator-App"
+                          target="_blank"
+                          >view code</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="project-title">
+                  <h4>Calculator app</h4>
+                  <ul class="tech-use">
+                    <li>html</li>
+                    <li>sass</li>
+                    <li>javascript</li>
+                  </ul>
+                  <ul class="project-links">
+                    <li>
+                      <a
+                        href="https://fem-calculator-app-seven.vercel.app/"
+                        target="_blank"
+                        >view project</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/Ronel028/FEM-Calculator-App"
+                        target="_blank"
+                        >view code</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card">
+                <div class="image-container">
+                  <img
+                    src="./assests/bms.jpg"
+                    alt="Barangay management system"
+                  />
+                  <div class="project-links-desktop">
+                    <ul>
+                      <li>
+                        <a
+                          href="https://github.com/Ronel028/barangay-management-system-final"
+                          target="_blank"
+                          >view project</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://github.com/Ronel028/barangay-management-system-final"
+                          target="_blank"
+                          >view code</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="project-title">
+                  <h4>Barangay management system</h4>
+                  <ul class="tech-use">
+                    <li>react</li>
+                    <li>express</li>
+                    <li>bootstrap</li>
+                    <li>sass</li>
+                    <li>mysql</li>
+                  </ul>
+                  <ul class="project-links">
+                    <li>
+                      <a
+                        href="https://github.com/Ronel028/barangay-management-system-final"
+                        target="_blank"
+                        >view project</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/Ronel028/barangay-management-system-final"
+                        target="_blank"
+                        >view code</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card">
+                <div class="image-container">
+                  <img
+                    src="./assests/ip-address-tracker.webp"
+                    alt="ip address tracker"
+                  />
+                  <div class="project-links-desktop">
+                    <ul>
+                      <li>
+                        <a
+                          href="https://fem-ipaddress-tracker.vercel.app/"
+                          target="_blank"
+                          >view project</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://github.com/Ronel028/fem-ipaddress-tracker"
+                          target="_blank"
+                          >view code</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="project-title">
+                  <h4>ip address tracker</h4>
+                  <ul class="tech-use">
+                    <li>html</li>
+                    <li>sass</li>
+                    <li>javascript</li>
+                    <li>
+                      <a href="https://geo.ipify.org/" target="_blank"
+                        >IP Geolocation API</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://leafletjs.com/" target="_blank"
+                        >LeafletJS</a
+                      >
+                    </li>
+                  </ul>
+                  <ul class="project-links">
+                    <li>
+                      <a
+                        href="https://fem-ipaddress-tracker.vercel.app/"
+                        target="_blank"
+                        >view project</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/Ronel028/fem-ipaddress-tracker"
+                        target="_blank"
+                        >view code</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card">
+                <div class="image-container">
+                  <img
+                    src="./assests/url-shortining-landing-page.webp"
+                    alt="url shortining landing page"
+                  />
+                  <div class="project-links-desktop">
+                    <ul>
+                      <li>
+                        <a
+                          href="https://url-shortening-api-psi.vercel.app/"
+                          target="_blank"
+                          >view project</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://github.com/Ronel028/URL-shortening-api"
+                          target="_blank"
+                          >view code</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="project-title">
+                  <h4>url shortening landing page</h4>
+                  <ul class="tech-use">
+                    <li>html</li>
+                    <li>sass</li>
+                    <li>javascript</li>
+                    <li>
+                      <a href="https://shrtco.de/" target="_blank"
+                        >shrtcode API</a
+                      >
+                    </li>
+                  </ul>
+                  <ul class="project-links">
+                    <li>
+                      <a
+                        href="https://url-shortening-api-psi.vercel.app/"
+                        target="_blank"
+                        >view project</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/Ronel028/URL-shortening-api"
+                        target="_blank"
+                        >view code</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card">
+                <div class="image-container">
+                  <img
+                    src="./assests/tip-calculator-app.webp"
+                    alt="Tip calculator"
+                  />
+                  <div class="project-links-desktop">
+                    <ul>
+                      <li>
+                        <a
+                          href="https://fem-tip-calculator-henna.vercel.app/"
+                          target="_blank"
+                          >view project</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://github.com/Ronel028/fem-tip-calculator"
+                          target="_blank"
+                          >view code</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="project-title">
+                  <h4>tip calculator</h4>
+                  <ul class="tech-use">
+                    <li>html</li>
+                    <li>sass</li>
+                    <li>javascript</li>
+                  </ul>
+                  <ul class="project-links">
+                    <li>
+                      <a
+                        href="https://fem-tip-calculator-henna.vercel.app/"
+                        target="_blank"
+                        >view project</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/Ronel028/fem-tip-calculator"
+                        target="_blank"
+                        >view code</a
+                      >
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div class="project-title">
-              <h4>fylo landing page</h4>
-              <ul class="tech-use">
-                <li>html</li>
-                <li>css</li>
-                <li>javascript</li>
-              </ul>
-              <ul class="project-links">
-                <li>
-                  <a
-                    href="https://fem-fylo-landing-page.vercel.app/"
-                    target="_blank"
-                    >view project</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/Ronel028/fem-fylo-landing-page"
-                    target="_blank"
-                    >view code</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="card">
-            <div class="image-container">
-              <img src="./assests/calculator-app.webp" alt="Calculator app" />
-              <div class="project-links-desktop">
-                <ul>
-                  <li>
-                    <a
-                      href="https://fem-calculator-app-seven.vercel.app/"
-                      target="_blank"
-                      >view project</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://github.com/Ronel028/FEM-Calculator-App"
-                      target="_blank"
-                      >view code</a
-                    >
-                  </li>
-                </ul>
+            <!-- first slide of project -->
+            <div class="swiper-slide">
+              <!-- github user search -->
+              <div class="card">
+                <div class="image-container">
+                  <img
+                    src="./assests/github-user-search.jpg"
+                    alt="github user search"
+                  />
+                  <div class="project-links-desktop">
+                    <ul>
+                      <li>
+                        <a
+                          href="https://github-user-search-psi-teal.vercel.app/"
+                          target="_blank"
+                          >view project</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://github.com/Ronel028/github-user-search"
+                          target="_blank"
+                          >view code</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="project-title">
+                  <h4>Github user search</h4>
+                  <ul class="tech-use">
+                    <li>html</li>
+                    <li>sass</li>
+                    <li>javascript</li>
+                    <li>express</li>
+                    <li>
+                      <a href="GitHub users API" target="_blank"
+                        >GitHub users API</a
+                      >
+                    </li>
+                  </ul>
+                  <ul class="project-links">
+                    <li>
+                      <a
+                        href="https://github-user-search-psi-teal.vercel.app/"
+                        target="_blank"
+                        >view project</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/Ronel028/github-user-search"
+                        target="_blank"
+                        >view code</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- user management system -->
+              <div class="card">
+                <div class="image-container">
+                  <img
+                    src="./assests/user-management-system.jpg"
+                    alt="user management system"
+                  />
+                  <div class="project-links-desktop">
+                    <ul>
+                      <li>
+                        <a
+                          href="https://user-management-system-73ja.vercel.app/"
+                          target="_blank"
+                          >view project</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://github.com/Ronel028/user-management-system"
+                          target="_blank"
+                          >view code</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="project-title">
+                  <h4>User management system</h4>
+                  <ul class="tech-use">
+                    <li>ejs</li>
+                    <li>sass</li>
+                    <li>javascript</li>
+                    <li>express</li>
+                    <li>mongodb</li>
+                  </ul>
+                  <ul class="project-links">
+                    <li>
+                      <a
+                        href="https://user-management-system-73ja.vercel.app/"
+                        target="_blank"
+                        >view project</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/Ronel028/user-management-system"
+                        target="_blank"
+                        >view code</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card">
+                <div class="image-container">
+                  <img
+                    src="./assests/bms.jpg"
+                    alt="Barangay management system"
+                  />
+                  <div class="project-links-desktop">
+                    <ul>
+                      <li>
+                        <a
+                          href="https://github.com/Ronel028/barangay-management-system-final"
+                          target="_blank"
+                          >view project</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://github.com/Ronel028/barangay-management-system-final"
+                          target="_blank"
+                          >view code</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="project-title">
+                  <h4>Barangay management system</h4>
+                  <ul class="tech-use">
+                    <li>react</li>
+                    <li>express</li>
+                    <li>bootstrap</li>
+                    <li>sass</li>
+                    <li>mysql</li>
+                  </ul>
+                  <ul class="project-links">
+                    <li>
+                      <a
+                        href="https://github.com/Ronel028/barangay-management-system-final"
+                        target="_blank"
+                        >view project</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/Ronel028/barangay-management-system-final"
+                        target="_blank"
+                        >view code</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card">
+                <div class="image-container">
+                  <img
+                    src="./assests/ip-address-tracker.webp"
+                    alt="ip address tracker"
+                  />
+                  <div class="project-links-desktop">
+                    <ul>
+                      <li>
+                        <a
+                          href="https://fem-ipaddress-tracker.vercel.app/"
+                          target="_blank"
+                          >view project</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://github.com/Ronel028/fem-ipaddress-tracker"
+                          target="_blank"
+                          >view code</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="project-title">
+                  <h4>ip address tracker</h4>
+                  <ul class="tech-use">
+                    <li>html</li>
+                    <li>sass</li>
+                    <li>javascript</li>
+                    <li>
+                      <a href="https://geo.ipify.org/" target="_blank"
+                        >IP Geolocation API</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://leafletjs.com/" target="_blank"
+                        >LeafletJS</a
+                      >
+                    </li>
+                  </ul>
+                  <ul class="project-links">
+                    <li>
+                      <a
+                        href="https://fem-ipaddress-tracker.vercel.app/"
+                        target="_blank"
+                        >view project</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/Ronel028/fem-ipaddress-tracker"
+                        target="_blank"
+                        >view code</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card">
+                <div class="image-container">
+                  <img
+                    src="./assests/url-shortining-landing-page.webp"
+                    alt="url shortining landing page"
+                  />
+                  <div class="project-links-desktop">
+                    <ul>
+                      <li>
+                        <a
+                          href="https://url-shortening-api-psi.vercel.app/"
+                          target="_blank"
+                          >view project</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://github.com/Ronel028/URL-shortening-api"
+                          target="_blank"
+                          >view code</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="project-title">
+                  <h4>url shortening landing page</h4>
+                  <ul class="tech-use">
+                    <li>html</li>
+                    <li>sass</li>
+                    <li>javascript</li>
+                    <li>
+                      <a href="https://shrtco.de/" target="_blank"
+                        >shrtcode API</a
+                      >
+                    </li>
+                  </ul>
+                  <ul class="project-links">
+                    <li>
+                      <a
+                        href="https://url-shortening-api-psi.vercel.app/"
+                        target="_blank"
+                        >view project</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/Ronel028/URL-shortening-api"
+                        target="_blank"
+                        >view code</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card">
+                <div class="image-container">
+                  <img
+                    src="./assests/tip-calculator-app.webp"
+                    alt="Tip calculator"
+                  />
+                  <div class="project-links-desktop">
+                    <ul>
+                      <li>
+                        <a
+                          href="https://fem-tip-calculator-henna.vercel.app/"
+                          target="_blank"
+                          >view project</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://github.com/Ronel028/fem-tip-calculator"
+                          target="_blank"
+                          >view code</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="project-title">
+                  <h4>tip calculator</h4>
+                  <ul class="tech-use">
+                    <li>html</li>
+                    <li>sass</li>
+                    <li>javascript</li>
+                  </ul>
+                  <ul class="project-links">
+                    <li>
+                      <a
+                        href="https://fem-tip-calculator-henna.vercel.app/"
+                        target="_blank"
+                        >view project</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/Ronel028/fem-tip-calculator"
+                        target="_blank"
+                        >view code</a
+                      >
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div class="project-title">
-              <h4>Calculator app</h4>
-              <ul class="tech-use">
-                <li>html</li>
-                <li>sass</li>
-                <li>javascript</li>
-              </ul>
-              <ul class="project-links">
-                <li>
-                  <a
-                    href="https://fem-calculator-app-seven.vercel.app/"
-                    target="_blank"
-                    >view project</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/Ronel028/FEM-Calculator-App"
-                    target="_blank"
-                    >view code</a
-                  >
-                </li>
-              </ul>
-            </div>
           </div>
-          <div class="card">
-            <div class="image-container">
-              <img src="./assests/bms.jpg" alt="Barangay management system" />
-              <div class="project-links-desktop">
-                <ul>
-                  <li>
-                    <a
-                      href="https://github.com/Ronel028/barangay-management-system-final"
-                      target="_blank"
-                      >view project</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://github.com/Ronel028/barangay-management-system-final"
-                      target="_blank"
-                      >view code</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="project-title">
-              <h4>Barangay management system</h4>
-              <ul class="tech-use">
-                <li>react</li>
-                <li>express</li>
-                <li>bootstrap</li>
-                <li>sass</li>
-                <li>mysql</li>
-              </ul>
-              <ul class="project-links">
-                <li>
-                  <a
-                    href="https://github.com/Ronel028/barangay-management-system-final"
-                    target="_blank"
-                    >view project</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/Ronel028/barangay-management-system-final"
-                    target="_blank"
-                    >view code</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="card">
-            <div class="image-container">
-              <img
-                src="./assests/ip-address-tracker.webp"
-                alt="ip address tracker"
-              />
-              <div class="project-links-desktop">
-                <ul>
-                  <li>
-                    <a
-                      href="https://fem-ipaddress-tracker.vercel.app/"
-                      target="_blank"
-                      >view project</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://github.com/Ronel028/fem-ipaddress-tracker"
-                      target="_blank"
-                      >view code</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="project-title">
-              <h4>ip address tracker</h4>
-              <ul class="tech-use">
-                <li>html</li>
-                <li>sass</li>
-                <li>javascript</li>
-                <li>
-                  <a href="https://geo.ipify.org/" target="_blank"
-                    >IP Geolocation API</a
-                  >
-                </li>
-                <li>
-                  <a href="https://leafletjs.com/" target="_blank">LeafletJS</a>
-                </li>
-              </ul>
-              <ul class="project-links">
-                <li>
-                  <a
-                    href="https://fem-ipaddress-tracker.vercel.app/"
-                    target="_blank"
-                    >view project</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/Ronel028/fem-ipaddress-tracker"
-                    target="_blank"
-                    >view code</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="card">
-            <div class="image-container">
-              <img
-                src="./assests/url-shortining-landing-page.webp"
-                alt="url shortining landing page"
-              />
-              <div class="project-links-desktop">
-                <ul>
-                  <li>
-                    <a
-                      href="https://url-shortening-api-psi.vercel.app/"
-                      target="_blank"
-                      >view project</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://github.com/Ronel028/URL-shortening-api"
-                      target="_blank"
-                      >view code</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="project-title">
-              <h4>url shortening landing page</h4>
-              <ul class="tech-use">
-                <li>html</li>
-                <li>sass</li>
-                <li>javascript</li>
-                <li>
-                  <a href="https://shrtco.de/" target="_blank">shrtcode API</a>
-                </li>
-              </ul>
-              <ul class="project-links">
-                <li>
-                  <a
-                    href="https://url-shortening-api-psi.vercel.app/"
-                    target="_blank"
-                    >view project</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/Ronel028/URL-shortening-api"
-                    target="_blank"
-                    >view code</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="card">
-            <div class="image-container">
-              <img
-                src="./assests/tip-calculator-app.webp"
-                alt="Tip calculator"
-              />
-              <div class="project-links-desktop">
-                <ul>
-                  <li>
-                    <a
-                      href="https://fem-tip-calculator-henna.vercel.app/"
-                      target="_blank"
-                      >view project</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://github.com/Ronel028/fem-tip-calculator"
-                      target="_blank"
-                      >view code</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="project-title">
-              <h4>tip calculator</h4>
-              <ul class="tech-use">
-                <li>html</li>
-                <li>sass</li>
-                <li>javascript</li>
-              </ul>
-              <ul class="project-links">
-                <li>
-                  <a
-                    href="https://fem-tip-calculator-henna.vercel.app/"
-                    target="_blank"
-                    >view project</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/Ronel028/fem-tip-calculator"
-                    target="_blank"
-                    >view code</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="see-more-btn">
-          <a href="#">see more</a>
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
     <!-- skills section -->
     <section class="skills-section">
       <div class="wrapper skills">
-        <div class="title">
+        <div
+          class="title"
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-aos-duration="800"
+        >
           <h2>SKILLS</h2>
           <p>Technical skills</p>
         </div>
 
         <!-- skills -->
         <div class="skills-container">
-          <div class="card">
+          <div
+            class="card"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-duration="600"
+          >
             <div class="front-end-skills">
               <div class="front-end">
                 <img src="./assests/code.svg" alt="code" />
@@ -457,7 +831,12 @@
               </div>
             </div>
           </div>
-          <div class="card">
+          <div
+            class="card"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="600"
+          >
             <div class="back-end-skills">
               <div class="back-end">
                 <img src="./assests/branch.svg" alt="branch" />
@@ -483,7 +862,12 @@
               </div>
             </div>
           </div>
-          <div class="card">
+          <div
+            class="card"
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="600"
+          >
             <div class="other-skills">
               <div class="others">
                 <img src="./assests/codesandbox.svg" alt="others" />
@@ -507,13 +891,23 @@
     <!-- contact section -->
     <section class="contact-section">
       <div class="wrapper contact">
-        <div class="title">
+        <div
+          class="title"
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-aos-duration="800"
+        >
           <h2>CONTACT</h2>
         </div>
 
         <!-- contact info -->
         <div class="contact-container">
-          <div class="contact-info">
+          <div
+            class="contact-info"
+            data-aos="fade-right"
+            data-aos-delay="200"
+            data-aos-duration="800"
+          >
             <h3>GET IN TOUCH</h3>
             <p class="desc">
               I’m open to job opportunity related to web development where I can
@@ -531,7 +925,12 @@
               </div>
             </div>
           </div>
-          <div class="contact-form">
+          <div
+            class="contact-form"
+            data-aos="fade-left"
+            data-aos-delay="200"
+            data-aos-duration="800"
+          >
             <form action="" class="form">
               <label>SEND MESSAGE</label>
               <div class="form-input">
@@ -625,5 +1024,16 @@
         </div>
       </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      AOS.init();
+      const swiper = new Swiper(".swiper", {
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
   </body>
 </html>

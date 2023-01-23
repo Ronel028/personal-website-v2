@@ -7,6 +7,7 @@
   --font-space-grotesk: "Space Grotesk", sans-serif;
   --font-bold: 700;
   --font-regular: 400;
+  --animate-delay: 0.5s;
 }
 
 * {
@@ -39,6 +40,11 @@ a {
 }
 .title p {
   font-size: clamp(1rem, 0.8682rem + 0.641vw, 1.125rem);
+}
+
+.animation_delay {
+  -webkit-animation-delay: var(--animate-delay);
+          animation-delay: var(--animate-delay);
 }
 
 .wrapper {
@@ -166,12 +172,12 @@ a {
 .project-section {
   padding: 40px 0;
   margin-bottom: 80px;
+  overflow-x: hidden;
 }
 .project-section .project {
   /* card section or the project section */
-  /* see more button */
 }
-.project-section .project .project-container {
+.project-section .project .project-container .swiper-slide {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
@@ -182,38 +188,38 @@ a {
   /* responsive design */
 }
 @media screen and (min-width: 744px) {
-  .project-section .project .project-container {
+  .project-section .project .project-container .swiper-slide {
     grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   }
 }
-.project-section .project .project-container .card {
+.project-section .project .project-container .swiper-slide .card {
   width: 100%;
   /* project title */
 }
-.project-section .project .project-container .card .image-container {
+.project-section .project .project-container .swiper-slide .card .image-container {
   width: 100%;
-  height: auto;
+  height: 280px;
   margin-bottom: 7px;
   position: relative;
   overflow: hidden;
   cursor: pointer;
 }
-.project-section .project .project-container .card .image-container:hover .project-links-desktop {
+.project-section .project .project-container .swiper-slide .card .image-container:hover .project-links-desktop {
   filter: opacity(0.9);
 }
-.project-section .project .project-container .card .image-container:hover img {
+.project-section .project .project-container .swiper-slide .card .image-container:hover img {
   transform: scale(1.2);
   transition: transform ease-in-out 0.3s;
 }
-.project-section .project .project-container .card .image-container img {
+.project-section .project .project-container .swiper-slide .card .image-container img {
   width: inherit;
   height: inherit;
   -o-object-fit: cover;
      object-fit: cover;
   transition: transform ease-in-out 0.3s;
 }
-.project-section .project .project-container .card .image-container .project-links-desktop {
-  display: flex;
+.project-section .project .project-container .swiper-slide .card .image-container .project-links-desktop {
+  display: none;
   /* responsive design */
   align-items: center;
   justify-content: center;
@@ -222,23 +228,29 @@ a {
   background-color: var(--card-background);
   filter: opacity(0);
   transition: filter ease-in-out 0.3s;
+  /* responsive design */
 }
-.project-section .project .project-container .card .image-container .project-links-desktop ul {
+@media screen and (min-width: 744px) {
+  .project-section .project .project-container .swiper-slide .card .image-container .project-links-desktop {
+    display: flex;
+  }
+}
+.project-section .project .project-container .swiper-slide .card .image-container .project-links-desktop ul {
   display: flex;
   gap: 26px;
 }
-.project-section .project .project-container .card .image-container .project-links-desktop ul li > a {
+.project-section .project .project-container .swiper-slide .card .image-container .project-links-desktop ul li > a {
   font-size: 1rem;
   font-weight: var(--font-bold);
   letter-spacing: 1.5px;
   text-transform: uppercase;
   position: relative;
 }
-.project-section .project .project-container .card .image-container .project-links-desktop ul li > a:hover::before {
+.project-section .project .project-container .swiper-slide .card .image-container .project-links-desktop ul li > a:hover::before {
   background-color: var(--hover-color);
   transition: all ease-in-out 0.3s;
 }
-.project-section .project .project-container .card .image-container .project-links-desktop ul li > a::before {
+.project-section .project .project-container .swiper-slide .card .image-container .project-links-desktop ul li > a::before {
   content: "";
   background-color: var(--underline-color);
   transition: all ease-in-out 0.3s;
@@ -249,74 +261,49 @@ a {
   left: 0;
   bottom: -4px;
 }
-.project-section .project .project-container .card .project-title h4 {
+.project-section .project .project-container .swiper-slide .card .project-title h4 {
   font-size: 1.125rem;
   letter-spacing: 1.5px;
   font-weight: var(--font-bold);
   text-transform: uppercase;
   margin-bottom: 12px;
 }
-.project-section .project .project-container .card .project-title ul.tech-use {
+.project-section .project .project-container .swiper-slide .card .project-title ul.tech-use {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 21px;
   margin-bottom: 12px;
 }
-.project-section .project .project-container .card .project-title ul.tech-use > li {
+.project-section .project .project-container .swiper-slide .card .project-title ul.tech-use > li {
   font-size: 0.75rem;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   font-weight: var(--font-regular);
 }
-.project-section .project .project-container .card .project-title ul.project-links {
+.project-section .project .project-container .swiper-slide .card .project-title ul.project-links {
   display: flex;
   align-items: center;
   gap: 26px;
   /* responsive design */
 }
 @media screen and (min-width: 744px) {
-  .project-section .project .project-container .card .project-title ul.project-links {
+  .project-section .project .project-container .swiper-slide .card .project-title ul.project-links {
     display: none;
   }
 }
-.project-section .project .project-container .card .project-title ul.project-links li > a {
+.project-section .project .project-container .swiper-slide .card .project-title ul.project-links li > a {
   font-size: 1rem;
   font-weight: var(--font-bold);
   letter-spacing: 1.5px;
   text-transform: uppercase;
   position: relative;
 }
-.project-section .project .project-container .card .project-title ul.project-links li > a:hover::before {
+.project-section .project .project-container .swiper-slide .card .project-title ul.project-links li > a:hover::before {
   background-color: var(--hover-color);
   transition: all ease-in-out 0.3s;
 }
-.project-section .project .project-container .card .project-title ul.project-links li > a::before {
-  content: "";
-  background-color: var(--underline-color);
-  transition: all ease-in-out 0.3s;
-  width: 95%;
-  height: 2px;
-  border-radius: 6px;
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-}
-.project-section .project .see-more-btn {
-  text-align: center;
-}
-.project-section .project .see-more-btn a {
-  font-size: 1rem;
-  font-weight: var(--font-bold);
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  position: relative;
-}
-.project-section .project .see-more-btn a:hover::before {
-  background-color: var(--hover-color);
-  transition: all ease-in-out 0.3s;
-}
-.project-section .project .see-more-btn a::before {
+.project-section .project .project-container .swiper-slide .card .project-title ul.project-links li > a::before {
   content: "";
   background-color: var(--underline-color);
   transition: all ease-in-out 0.3s;
@@ -413,6 +400,7 @@ a {
 .contact-section {
   padding: 44px 0;
   margin-bottom: 80px;
+  overflow-x: hidden;
 }
 .contact-section .contact .contact-container {
   display: grid;
