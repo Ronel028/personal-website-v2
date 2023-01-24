@@ -85,8 +85,8 @@
             Nice to meet you! I’m <span class="name">Ronel Florida.</span>
           </h1>
           <p class="animate__animated animate__fadeInLeft animation_delay">
-            Based from Philippines. I'm a web developer passionate about
-            building websites.
+            Based in the Philippines. I'm a Full Stack Developer passionate
+            about building websites.
           </p>
           <div class="animate__animated animate__fadeInLeft animation_delay">
             <a href="#contact" class="download-btn"> CONTACT ME! </a>
@@ -121,7 +121,7 @@
               improve my skills and expand my knowledge.
             </p>
             <a
-              href="https://drive.google.com/file/d/1DYZ23EDZuZdzzZG4shP1etRDSQUt7qem/view?usp=sharing"
+              href="https://drive.google.com/file/d/1UcvYjIZ10FZrumTOLooiY00XtBHpyoTB/view?usp=sharing"
               target="_blank"
               class="download-btn"
               >DOWNLOAD MY CV</a
@@ -1275,6 +1275,11 @@
           </div>
           <div class="swiper-pagination"></div>
         </div>
+        <button id="project-btn-left" class="arrow swiper-button-prev"></button>
+        <button
+          id="project-btn-right"
+          class="arrow swiper-button-next"
+        ></button>
       </div>
     </section>
     <!-- skills section -->
@@ -1561,6 +1566,11 @@
       const swiper = new Swiper(".swiper", {
         pagination: {
           el: ".swiper-pagination",
+        },
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
       });
     </script>
