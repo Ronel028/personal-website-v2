@@ -33,7 +33,10 @@
           font-weight: var(--font-regular);
           line-height: 25px;
           letter-spacing: 1px;
-          margin-bottom: 34px;
+          margin-bottom: 20px;
+        }
+        p.last-child {
+          margin-bottom: 32px;
         }
         .download-btn {
           color: var(--text-color);

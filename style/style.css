@@ -214,7 +214,10 @@ a {
   font-weight: var(--font-regular);
   line-height: 25px;
   letter-spacing: 1px;
-  margin-bottom: 34px;
+  margin-bottom: 20px;
+}
+.about-section .about .about-content .left-content p.last-child {
+  margin-bottom: 32px;
 }
 .about-section .about .about-content .left-content .download-btn {
   color: var(--text-color);
