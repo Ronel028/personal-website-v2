@@ -18,7 +18,6 @@
         column-gap: 68px;
       }
       .left-content {
-        text-align: center;
         @media screen and (min-width: 800px) {
           text-align: left;
         }
@@ -27,6 +26,10 @@
           font-weight: var(--font-bold);
           letter-spacing: 1.5px;
           margin-bottom: 34px;
+          text-align: center;
+          @media screen and (min-width: 800px) {
+            text-align: left;
+          }
         }
         p {
           font-size: clamp(1rem, 0.8682rem + 0.641vw, 1.125rem);

@@ -195,9 +195,6 @@ a {
          column-gap: 68px;
   }
 }
-.about-section .about .about-content .left-content {
-  text-align: center;
-}
 @media screen and (min-width: 800px) {
   .about-section .about .about-content .left-content {
     text-align: left;
@@ -208,6 +205,12 @@ a {
   font-weight: var(--font-bold);
   letter-spacing: 1.5px;
   margin-bottom: 34px;
+  text-align: center;
+}
+@media screen and (min-width: 800px) {
+  .about-section .about .about-content .left-content h4 {
+    text-align: left;
+  }
 }
 .about-section .about .about-content .left-content p {
   font-size: clamp(1rem, 0.8682rem + 0.641vw, 1.125rem);
