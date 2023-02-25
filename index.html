@@ -1643,8 +1643,10 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        document.querySelector(".loader-container").style.display = "none";
-        document.querySelector("#home").style.display = "block";
+        setTimeout(() => {
+          document.querySelector(".loader-container").style.display = "none";
+          document.querySelector("#home").style.display = "block";
+        }, 3000);
       });
 
       AOS.init();
