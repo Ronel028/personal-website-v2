@@ -25,13 +25,7 @@
   <body>
     <div class="loader-container">
       <div class="loader">
-        <div class="loader-square"></div>
-        <div class="loader-square"></div>
-        <div class="loader-square"></div>
-        <div class="loader-square"></div>
-        <div class="loader-square"></div>
-        <div class="loader-square"></div>
-        <div class="loader-square"></div>
+        <span>Loading...</span>
       </div>
     </div>
     <div id="home" style="display: none">
@@ -1646,10 +1640,10 @@
         setTimeout(() => {
           document.querySelector(".loader-container").style.display = "none";
           document.querySelector("#home").style.display = "block";
+          AOS.init();
         }, 3000);
       });
 
-      AOS.init();
       const swiper = new Swiper(".swiper", {
         pagination: {
           el: ".swiper-pagination",
